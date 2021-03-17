@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    name: guus
+    url: jdbc:mysql://localhost:6521/guus?serverTimezone=UTC
+    username: root
+    password: supercoolGJ0628@cpic
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.guus.gjtest.bean
