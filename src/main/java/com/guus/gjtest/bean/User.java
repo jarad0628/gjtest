@@ -3,7 +3,7 @@ package com.guus.gjtest.bean;
 import lombok.Data;
 
 @Data
-public class UserBean {
+public class User {
 
     private int id;
     private String name;

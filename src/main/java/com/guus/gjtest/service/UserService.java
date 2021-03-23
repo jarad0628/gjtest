@@ -1,8 +1,10 @@
 package com.guus.gjtest.service;
 
-import com.guus.gjtest.bean.UserBean;
+import com.guus.gjtest.bean.User;
 
 public interface UserService {
 
-    UserBean getInfo(String name, String password);
+    User getInfo(String name, String password);
+
+    String testPlus(String name);
 }

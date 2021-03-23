@@ -1,8 +1,9 @@
 package com.guus.gjtest.mapper;
 
-import com.guus.gjtest.bean.UserBean;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.guus.gjtest.bean.User;
 
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<User> {
 
-    UserBean getInfo(String name, String password);
+    User getInfo(String name, String password);
 }
