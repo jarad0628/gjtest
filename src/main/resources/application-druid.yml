@@ -1,21 +1,23 @@
-##spring数据源配置
+# spring数据源配置
 spring:
-  ##数据源
   datasource:
-    ##jdbc驱动
+    # jdbc驱动
     driver-class-name: com.mysql.cj.jdbc.Driver
-    ##连接池类型
+    # 连接池类型
     type: com.alibaba.druid.pool.DruidDataSource
-    ##连接池配置
+    # 连接池配置
     druid:
-      ##jdbcUrl
+      # jdbcUrl
       url: jdbc:mysql://81.71.122.50:6521/guus?serverTimezone=UTC
-      ##用户
+      # 用户
       username: root
-      ##口令
+      # 口令
       password: supercoolGJ0628@cpic
+      # 初始化连接数
       initial-size: 5
+      # 最小空闲连接数
       min-idle: 5
+      # 最大活动连接数
       max-active: 20
       # 配置获取连接等待超时的时间
       max-wait: 60000
@@ -23,7 +25,7 @@ spring:
       time-between-eviction-runs-millis: 60000
       # 配置一个连接在池中最小生存的时间，单位是毫秒
       min-evictable-idle-time-millis: 300000
-      validation-query: SELECT h1 FROM DUAL
+      validation-query: SELECT 1 FROM DUAL
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false

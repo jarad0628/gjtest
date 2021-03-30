@@ -1,18 +1,42 @@
-##目前已集成 mybatis-plus,druid,
-##服务器配置
+# 目前已集成 mybatis-plus,druid,log4j2
+# 服务器配置
 server:
-  ##服务器的HTTP端口，默认为80
+  # 服务器的HTTP端口，默认为80
   port: 80
   servlet:
-    ##应用的访问路径
+    # 应用的访问路径
     context-path: /
   tomcat:
-    ##tomcat的URI编码
+    # tomcat的URI编码
     uri-encoding: UTF-8
     threads:
       max: 800
       min-spare: 30
 
+# 激活其它yml配置
 spring:
   profiles:
     active: druid
+
+# 激活日志配置
+logging:
+  config: classpath:log4j2.yml
+
+# mybatis-plus配置
+mybatis-plus:
+  # Mapper.xml文件路径
+  mapper-locations: classpath:mapper/*.xml
+  # MyBaits Bean文件路径（用逗号或分号分隔）
+  type-aliases-package: com.guus.gjtest.bean
+  # 配置项
+  configuration:
+    # 下划线转驼峰
+    map-underscore-to-camel-case: true
+    # Oracle数据库必配
+    jdbc-type-for-null: null
+  global-config:
+    # 是否控制台 print mybatis-plus 的 LOGO
+    banner: false
+    db-config:
+      # 数据表下划线命名
+      table-underline: true
